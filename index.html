@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8'>
-
+  <script type="text/javascript" src="https://raw.github.com/enru/SlippySlideshow/master/slideshow.js"></script>
   <title>enru/SlippySlideshow @ GitHub</title>
 
   <style type="text/css">
@@ -27,6 +27,15 @@
     pre { background: #000; color: #fff; padding: 15px;}
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
+
+.slippy { width: 335px; overflow:hidden; position: relative; }
+.slippy .frame { min-height: 100px; list-style: none;}
+.slippy li.slide { width: 335px; position: absolute; }
+
+
+.slippy { overflow:visible; border: 1px solid #000; }
+body { margin-left: 335px; }
+
   </style>
 </head>
 
@@ -48,6 +57,37 @@
     <div class="description">
       Yet another JavaScript slideshow... 
     </div>
+
+<div id="slippy" class="slippy">
+	<ul class="frame">
+		<li class="slide">ONE</li>
+		<li class="slide">TWO</li>
+		<li class="slide">THREE</li>
+		<li class="slide">FOUR</li>
+	</ul>
+    <div class="controls">
+    	<a href="#" class="prev">prev</a>
+   		<a href="#" class="next">next</a>
+    </div>
+</div>
+<div id="slippy2" class="slippy">
+	<ul class="frame">
+		<li class="slide">2-ONE</li>
+		<li class="slide">2-TWO</li>
+		<li class="slide">2-THREE</li>
+		<li class="slide">2-FOUR</li>
+	</ul>
+    <div class="controls">
+    	<a href="#" class="prev">prev</a>
+   		<a href="#" class="next">next</a>
+    </div>
+</div>
+<script type="text/javascript" src="slideshow.js"></script>
+<script type="text/javascript">
+Slippy.Slideshow.init('slippy', { speed: 1, width: 335 });
+Slippy.Slideshow.init('slippy2', { speed: 1, width: 720 });
+
+</script>
 
     
 
