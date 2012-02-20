@@ -28,7 +28,9 @@ Slippy = {
 
                 if (slippy = Slippy.Slideshow.get(slippyId)) {
 
-                    slippy.timer = window.setTimeout('Slippy.Slideshow.move("' + slippyId + '","' + direction + '")', slippy.speed);
+                    slippy.timer = window.setTimeout(
+                        'Slippy.Slideshow.move("' + slippyId + '","' + direction + '")',
+                        slippy.speed);
 
                     slippy.moved += slippy.stepWidth;
 
