@@ -91,7 +91,9 @@ Slippy = {
                 var params = ['debug', 'speed', 'width', 'height'];
                 for (var i = 0; i < params.length; i++) {
                     var p = params[i];
-                    if (arguments.length && typeof arguments[1][p] != 'undefined') {
+                    if (arguments.length > 1
+                        && arguments[1].hasOwnProperty(p) 
+                        && typeof arguments[1][p] != 'undefined') {
                         this[p] = arguments[1][p];
                     }
                 }
