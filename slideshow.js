@@ -120,8 +120,8 @@ Slippy = {
                 // fix widths & heights
                 for (var i = 0; i < this.slides[slippyId].length; i++) {
                     var slide = this.slides[slippyId][i];
-                    if (this.width > 0) slide.width = this.width;
-                    if (this.height > 0) slide.height = this.height;
+                    if (this.width > 0) slide.width = this.width+'px';
+                    if (this.height > 0) slide.height = this.height+'px';
                     slide.style.left = (i * this.width) + 'px';
                 };
 
