@@ -113,7 +113,7 @@ Slippy = {
                         if (elem.addEventListener) {
                             elem.addEventListener('click', Slippy.Slideshow.click(action, slippyId), false);
                         } else if (elem.attachEvent) {
-                            elem.attachEvent('onclick', Slippy.Slideshow.click(action));
+                            elem.attachEvent('onclick', Slippy.Slideshow.click(action, slippyId));
                         }
                     }
                 }
