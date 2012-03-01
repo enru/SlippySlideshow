@@ -82,7 +82,8 @@ Slippy = {
             },
             click: function (action, slippyId) {
                 return function () {
-                    event.preventDefault();
+                    if(event.preventDefault) event.preventDefault();
+					else event.returnValue = false;
                     Slippy.Slideshow.get(slippyId)[action](slippyId)
                 }
             },
